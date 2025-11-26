@@ -151,7 +151,7 @@
         {
           "foreground": "p:fujiWhite",
           "properties": {
-            "folder_icon": "\uf07b ",
+            "folder_icon": "\uf07b",
             "folder_separator_template": "<p:fujiGray> \udb83\udfdf </>",
             "home_icon": "~",
             "style": "agnoster_short"
