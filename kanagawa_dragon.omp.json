@@ -25,10 +25,9 @@
       "segments": [
         {
           "foreground_templates": [
-            "{{ if ge .Percentage 69}}p:autumnGreen{{ end }}",
-            "{{ if and (ge .Percentage 40) (le .Percentage 68) }}p:boatYellow2{{ end }}",
-            "{{ if and (ge .Percentage 10) (le .Percentage 39) }}p:waveRed{{ end }}",
-            "{{ if le .Percentage 9 }}p:autumnRed{{ end }}"
+            "{{if eq \"Charging\" .State.String}}p:boatYellow2{{end}}",
+            "{{if eq \"Discharging\" .State.String}}p:waveRed{{end}}",
+            "{{if eq \"Full\" .State.String}}p:autumnGreen{{end}}"
           ],
           "properties": {
             "discharging_icon": "\udb81\ude8c",
@@ -79,7 +78,7 @@
         {
           "foreground": "p:sumiInk4",
           "style": "plain",
-          "template": "\u250c",
+          "template": "\u256d\u2500",
           "type": "text"
         },
         {
@@ -129,7 +128,7 @@
             "fetch_status": true
           },
           "style": "plain",
-          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf01f {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} | {{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}\u2800",
+          "template": "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf01f {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} | {{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}\u2800",
           "type": "git"
         }
       ]
@@ -142,7 +141,7 @@
         {
           "foreground": "p:sumiInk4",
           "style": "plain",
-          "template": "\u2514",
+          "template": "\u2570\u2500",
           "type": "text"
         },
         {
@@ -240,6 +239,12 @@
       ]
     }
   ],
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "p:katanaGray",
+    "template": "<p:waveAqua1>{{ .HostName }}</>@<p:waveAqua1>{{ .UserName }}</>: ",
+    "type": "session"
+  },
   "console_title_template": "{{.Shell}} in {{.PWD}}",
   "final_space": true,
   "version": 3

@@ -29,7 +29,7 @@
       "segments": [
         {
           "foreground_templates": [
-            "{{ if ge .Percentage 69}}p:autumnGreen{{ end }}",
+            "{{ if ge .Percentage 69}}p:springGreen{{ end }}",
             "{{ if and (ge .Percentage 40) (le .Percentage 68) }}p:boatYellow2{{ end }}",
             "{{ if and (ge .Percentage 10) (le .Percentage 39) }}p:waveRed{{ end }}",
             "{{ if le .Percentage 9 }}p:autumnRed{{ end }}"
@@ -83,7 +83,7 @@
         {
           "foreground": "p:katanaGray",
           "style": "plain",
-          "template": "\u250c",
+          "template": "\u256d\u2500",
           "type": "text"
         },
         {
@@ -126,7 +126,7 @@
           "type": "git"
         },
         {
-          "background": "p:peachRed",
+          "background": "p:waveRed",
           "foreground": "p:fujiWhite",
           "properties": {
             "branch_icon": " \udb81\ude2c ",
@@ -146,7 +146,7 @@
         {
           "foreground": "p:katanaGray",
           "style": "plain",
-          "template": "\u2514",
+          "template": "\u2570\u2500",
           "type": "text"
         },
         {
@@ -244,6 +244,12 @@
       ]
     }
   ],
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "p:katanaGray",
+    "template": "<p:waveAqua2>{{ .HostName }}</>@<p:waveAqua2>{{ .UserName }}</>: ",
+    "type": "session"
+  },
   "console_title_template": "{{.Shell}} in {{.PWD}}",
   "final_space": true,
   "version": 3

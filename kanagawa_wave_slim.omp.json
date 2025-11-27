@@ -173,6 +173,10 @@
       ]
     }
   ],
+  "transient_prompt": {
+    "foreground": "p:sumiInk4",
+    "template": "<p:waveAqua2>{{ .UserName }}</>@<p:waveAqua2>{{ .Shell }}</>: "
+  },
   "console_title_template": "{{.Shell}} in {{.PWD}}",
   "final_space": true,
   "version": 3

@@ -173,6 +173,10 @@
       ]
     }
   ],
+  "transient_prompt": {
+    "foreground": "p:katanaGray",
+    "template": "<p:waveAqua1>{{ .UserName }}</>@<p:waveAqua1>{{ .Shell }}</>: "
+  },
   "console_title_template": "{{.Shell}} in {{.PWD}}",
   "final_space": true,
   "version": 3
