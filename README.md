@@ -3,10 +3,13 @@ A custom theme for oh-my-posh with the [kanagawa](https://github.com/rebelot/kan
 
 # Previews
 ###  Kanagawa Wave
+Default
 <img title="Kanagawa Wave" alt="Kanagawa Wave of oh-my-posh" src="kanagawa_wave.png">
+Slim
+<img title="Kanagawa Wave" alt="Kanagawa Wave Slim of oh-my-posh" src="kanagawa_wave_slim.png">
 
 ### Kanagawa Dragon
+Default
 <img title="Kanagawa Dragon" alt="Kanagawa Dragon of oh-my-posh" src="kanagawa_dragon.png">
- 
-# Todo
-- Slim version
+Slim
+<img title="Kanagawa Dragon" alt="Kanagawa Dragon Slim of oh-my-posh" src="kanagawa_dragon_slim.png">
